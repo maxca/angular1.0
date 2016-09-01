@@ -1,0 +1,87 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8" />
+        <title>My Learn AngularJs 1.5.8</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body ng-controller="firstController as firstCtl">
+        <h2>Angularjs</h2>
+        
+        <div class="container">
+            <form class="form-horizontal" name="addData" ng-submit="addDataForm(addData.$valid)" novalidate>
+                <fieldset>
+                    <!-- Form Name -->
+                    <legend>Form Name</legend>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">Text Input</label>
+                        <div class="col-md-4">
+                            <input type="text" ng-model="data.text" name="textinput" id="textinput" class="form-control input-md" required>
+                            <span class="help-block" ng-show="(addData.textinput.$invalid && addData.textinput.$dirty)">
+                                <p ng-show="addData.textinput.$error.required" class="">
+                                    This field is required.
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="selectbasic">Select Basic</label>
+                        <div class="col-md-4">
+                            <select ng-model="data.select" id="selectbasic" name="selectbasic" class="form-control" required>
+                                <option value="" selected></option>
+                                <option value="1">Option one</option>
+                                <option value="2">Option two</option>
+                            </select>
+                            <span class="help-block" ng-show="(addData.selectbasic.$invalid && addData.selectbasic.$dirty)">
+                                <p ng-show="addData.selectbasic.$error.required" class="">
+                                    This field is required.
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Textarea -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textarea">Text Area</label>
+                        <div class="col-md-4">
+                            <textarea ng-model="data.textarea" name="textarea" id="textarea" required class="form-control" >default text</textarea>
+                            <span class="help-block" ng-show="(addData.textarea.$invalid && addData.textarea.$dirty)">
+                                <p ng-show="addData.textarea.$error.required" class="">
+                                    This field is required.
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="singlebutton">Submit</label>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="list-group">
+                <div class="list-group-item clearfix" ng-repeat="data in datas">
+                    <h3>Text Input : {{data.text}}</h3>
+                    <h3>Select : {{data.select}}</h3>
+                    <h3>Text Area : {{data.textarea}}</h3>
+                </div>
+            </div>
+            <pre>
+            {{ addData | json }}
+            </pre>
+        </div>
+    </body>
+    <!-- load angularjs -->
+    <script src="angular.min-1.5.8.js"></script>
+    <script src="main.js"></script>
+    <script src="service.js"></script>
+</html>
