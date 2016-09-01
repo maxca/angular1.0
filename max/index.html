@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="appEggLab">
+	<head>
+		<title>Test angular 101</title>
+		<script type="text/javascript" src="../training/angular.min.js"></script>
+		<script type="text/javascript" src="../training/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div ng-controller="mainController">
+			<input class="name" ng-model="list.item.name" data- type="text" value="{{list.item.name}}"><br>
+			<input class="lastName" ng-model="list.item.lastName" data- type="text" value="{{list.item.lastName}}"><br>
+				{{ name }}
+				<br>
+				name: {{ list.item.name}}<br>
+				lastName: {{ list.item.lastName}}
+				<pre>
+				{{ list | json}}
+				</pre>
+			</div>
+
+		</div>
+	</body>
+</html>
