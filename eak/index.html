@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="herpderp">
+	<head>
+		<title>Test angular 101</title>
+		<script type="text/javascript" src="angular.min.js"></script>
+		<script type="text/javascript" src="angular-route.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid" ng-controller="defaultController">
+				
+			<form>
+				<label>name</label>
+				<input type="text" name="name" ng-model="data.name"><br>
+
+				<label>email</label>
+				<input type="email" name="email" ng-model="data.email"><br>
+				
+				<label>iphone</label>
+				<input type="text" name="phone" ng-model="data.phone"><br>
+				
+				<label>cid</label>
+				<input type="text" name="cid" ng-model="data.cid"><br>
+				
+				<label>password</label>
+				<input type="password" name="password" ng-model="data.password"><br>
+
+				<input type="submit" ng-click="submit(data)" value="Submit">
+			</form>
+
+		</div>
+	    <ng-view></ng-view>
+	</body>
+</html>
