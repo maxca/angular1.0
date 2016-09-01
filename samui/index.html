@@ -6,24 +6,18 @@
     <title></title>
 </head>
 <!-- <body ng-init="price=100;qty=50"> -->
-<body ng-init="names=['Name 01','Name 02', 'Name03']">
-<!--     <div class="container">
-        <input type="text" class = "form-control" ng-model="text"  placeholder="You name" />
-        <br>
-        <p>Hello World, {{ text }}</p>
-        </br>
-        <input type="text" class = "form-control" ng-model="text"  placeholder="You name" />
-    </div> -->
-        <div class="container">
+<body>
+        <div class="container" ng-view>
         <h2>AngularJS</h2>
-            <form>
+            <form name = 'myForm'>
               <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Email</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                <input type="email" ng-model="myInput" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                <h1>{{myForm.myInput.$valid}}</h1>
               </div>
                 <div class="form-group">
                 <label for="exampleInputPassword1">tel</label>
