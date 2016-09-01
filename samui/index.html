@@ -6,38 +6,33 @@
     <title></title>
 </head>
 <!-- <body ng-init="price=100;qty=50"> -->
-<body ng-init="names=['Name 01','Name 02', 'Name03']">
-<!--     <div class="container">
-        <input type="text" class = "form-control" ng-model="text"  placeholder="You name" />
-        <br>
-        <p>Hello World, {{ text }}</p>
-        </br>
-        <input type="text" class = "form-control" ng-model="text"  placeholder="You name" />
-    </div> -->
-        <div class="container">
+<body>
+        <div class="container" ng-view>
         <h2>AngularJS</h2>
-            <form>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Email</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Email">
-              </div>
+            <form name = 'addData' >
                 <div class="form-group">
-                <label for="exampleInputPassword1">tel</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="tel">
-              </div>
-             <div class="form-group">
-                <label for="exampleInputPassword1">thai id</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="thai id">
-              </div>
-             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
+                  <label for="exampleInputEmail1">Name</label>
+                  <input require type="text" class="form-control" id="exampleInputEmail1" name = 'name' placeholder="Name">
+                  <h1>{{myForm.name.$valid}}</h1>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Email</label>
+                  <input type="email" name="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                  <h1>{{myForm.email.$valid}}</h1>
+                </div>
+                  <div class="form-group">
+                  <label for="exampleInputPassword1">tel</label>
+                  <input type="text" class="form-control" name = "tel" id="" placeholder="tel">
+                </div>
+               <div class="form-group">
+                  <label for="exampleInputPassword1">thai id</label>
+                  <input type="text" class="form-control" name= "thai_id" id="" placeholder="thai id">
+                </div>
+               <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" name = "password" id="" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
             </form>
         </div>
 </body>
