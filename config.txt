@@ -1,0 +1,6 @@
+# get user end point [GET]
+http://chaodev.com/training/getUsers.php
+# add user end piont [POST]
+http://chaodev.com/training/addUsers.php
+# remove user end piont [POST]
+http://chaodev.com/training/removeUsers.php
