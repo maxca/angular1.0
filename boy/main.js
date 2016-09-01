@@ -17,6 +17,8 @@
     });
     /** controller simple display  */
     appTrainAngular.controller('mainController', ['$scope', function($scope) {
+        $scope.frmLab = {};
+        $scope.list = {};
         $scope.fnSubmit = function(data){
             console.log(data)
         };
