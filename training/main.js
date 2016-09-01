@@ -3,7 +3,6 @@
 		"thirdPartyApi"
 	]);
 	myApp.controller('firstController', ['$scope', '$http', '$q', 'users' , 'usersV2', function ($scope, $http, $q, users, usersV2) {
-		$scope.hello = "Hello";
 		$scope.users = [];
 		users.getUsers().then(function(res){
 			$scope.users = res;
@@ -25,9 +24,9 @@
 		
 		$scope.datas = [];
 		$scope.addDataForm = function(isValid){
-			if(isValid){
+			if(isValid) {
 				
-			}else{
+			} else {
 				alert("กรุณากรอกฟอร์มให้ครบ");
 			}
 		};
