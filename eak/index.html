@@ -9,23 +9,23 @@
 	<body>
 		<div class="container-fluid" ng-controller="defaultController">
 				
-			<form>
+			<form name='derp'>
 				<label>name</label>
-				<input type="text" name="name" ng-model="data.name"><br>
+				<input type="text" name="name" ng-model="data.name" required><span ng-show="derp.name.$invalid">Hey!</span><br>
 
 				<label>email</label>
-				<input type="email" name="email" ng-model="data.email"><br>
+				<input type="email" name="email" ng-model="data.email" required><span ng-show="derp.email.$invalid">Hey!</span><br>
 				
 				<label>iphone</label>
-				<input type="text" name="phone" ng-model="data.phone"><br>
+				<input type="text" name="phone" ng-model="data.phone" required><span ng-show="derp.phone.$invalid">Hey!</span><br>
 				
 				<label>cid</label>
-				<input type="text" name="cid" ng-model="data.cid"><br>
+				<input type="text" name="cid" ng-model="data.cid" required><span ng-show="derp.cid.$invalid">Hey!</span><br>
 				
 				<label>password</label>
-				<input type="password" name="password" ng-model="data.password"><br>
+				<input type="password" name="password" ng-model="data.password" required><span ng-show="derp.password.$invalid">Hey!</span><br>
 
-				<input type="submit" ng-click="submit(data)" value="Submit">
+				<input type="submit" ng-click="submit(derp.$valid)" value="Submit">
 			</form>
 
 		</div>

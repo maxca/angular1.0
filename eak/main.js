@@ -15,8 +15,9 @@
 			password: '9541859',
 		};
 
-	  $scope.submit = function(data) {
-	  	console.log(data);
+	  $scope.submit = function(valid) {
+	  	console.log($scope.data);
+	  	console.log(valid);
 	  }
 	});
  
