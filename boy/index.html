@@ -19,62 +19,15 @@
 </head>
 <body>
 
-<div class="container">
-    <form class="form-horizontal">
-        <h2>Angular 101</h2>
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="name">ชื่อ:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="name" placeholder="ชื่อ">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="email">อีเมล์:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="email" placeholder="อีเมล์">
-            </div>
-        </div>
+<div class="container" ng-view>
 
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="phone">เบอร์มือถือ:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="phone" placeholder="เบอร์มือถือ" ng-maxlegth="10">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="thaiid">Thai ID:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="thaiid" placeholder="Thai ID" ng-maxlegth="13">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="password">Password:</label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control" id="password" placeholder="Password">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="password">Confirm Password:</label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control" id="confirm_password" placeholder="Confirm password">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">Submit</button>
-            </div>
-        </div>
-    </form>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script src="angular.min.js"></script>
+<script src="angular-route.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

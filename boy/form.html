@@ -1,0 +1,64 @@
+<form class="form-horizontal" name="frmLab" ng-submit="fnSubmit(frmLab.$valid)" novalidate>
+    <h2>Angular 101</h2>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="name">ชื่อ:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="name" placeholder="ชื่อ" ng-model="list.item.name" required>
+             <span class="help-block" ng-show="(frmLab.name.$invalid && frmLab.name.$dirty)">
+                <p ng-show="frmLab.name.$error.required" class="">
+                    This field is required.
+                </p>
+            </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="email">อีเมล์:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="email" placeholder="อีเมล์" ng-model="list.item.email">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="phone">เบอร์มือถือ:</label>
+        <div class="col-sm-10">
+            <input class="form-control" id="phone" placeholder="เบอร์มือถือ" ng-maxlegth="10" ng-model="list.item.phone" >
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="thaiid">Thai ID:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="thaiid" placeholder="Thai ID" ng-maxlegth="13" ng-model="list.item.thaiid">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="password">Password:</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="password" placeholder="Password" ng-model="list.item.password">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="password">Confirm Password:</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="confirm_password" placeholder="Confirm password" ng-model="list.item.confirm_password">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </div>
+</form>
+
+
+
+{{ name }}
+<br>
+name: {{ list.item.name}}<br>
+lastName: {{ list.item.lastName}}
+<pre>
+{{ list | json}}
+</pre>
