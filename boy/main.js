@@ -6,7 +6,7 @@
 
     appTrainAngular.config(function($routeProvider) {
         $routeProvider.when('/index', {
-            templateUrl: 'display.html',
+            templateUrl: 'form.html',
             controller: 'mainController'
         }).when('/google',{
             templateUrl: 'js/index2.html',
@@ -17,7 +17,9 @@
     });
     /** controller simple display  */
     appTrainAngular.controller('mainController', ['$scope', function($scope) {
-        $scope.submitform = function(data){
+        $scope.frmLab = {};
+        $scope.list = {};
+        $scope.fnSubmit = function(data){
             console.log(data)
         };
     }]);

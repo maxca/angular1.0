@@ -14,9 +14,10 @@
 	});
 	/** controller simple display  */
 	appEggLab.controller('mainController', ['$scope', function($scope) {
+		$scope.submit = function(list){
+			console.log(list);
+		}
 		$scope.name = '';
 		// $scope.list = 'samark chaisanguan';
-		var objectJson = {};
-		$scope.list = objectJson;
 	}]);
 }());
