@@ -23,42 +23,43 @@
 		});
 		
 		$scope.datas = [];
-		$scope.addDataForm = function(isValid){
+		$scope.addDataForm = function(data,isValid){
 			if(isValid) {
-				
+				$scope.inputForm = data;
+				console.log(data);
 			} else {
 				alert("กรุณากรอกฟอร์มให้ครบ");
 			}
 		};
-		// $http({
-		// 	method: "GET",
-		// 	url: "http://chaodev.com/training/getUsers.php",
-		// 	data: {},
-		// 	timeout: 10000,
-		// 	headers: {
-		// 		'Content-Type': 'application/json;charset=utf-8'
-		// 	}
-		// }).then(function(success){
-		// 	console.log(success);
-		// 	console.log('ok get');
-		// }, function(error){
-		// 	console.log(error);
-		// });
+		$http({
+			method: "GET",
+			url: "http://chaodev.com/training/getUsers.php",
+			data: {},
+			timeout: 10000,
+			headers: {
+				'Content-Type': 'application/json;charset=utf-8'
+			}
+		}).then(function(success){
+			console.log(success);
+			console.log('ok get');
+		}, function(error){
+			console.log(error);
+		});
 
-		// $http({
-		// 	method: "POST",
-		// 	url: "http://chaodev.com/training/addUsers.php",
-		// 	data: {name: "chaowalit__", mobile: "0988778890"},
-		// 	timeout: 10000,
-		// 	headers: {
-		// 		'Content-Type': 'application/json;charset=utf-8'
-		// 	}
-		// }).then(function(success){
-		// 	console.log(success);
-		// 	console.log('ok post');
-		// }, function(error){
-		// 	console.log(error);
-		// });
+		$http({
+			method: "POST",
+			url: "http://chaodev.com/training/addUsers.php",
+			data: {name: "chaowalit__", mobile: "0988778890"},
+			timeout: 10000,
+			headers: {
+				'Content-Type': 'application/json;charset=utf-8'
+			}
+		}).then(function(success){
+			console.log(success);
+			console.log('ok post');
+		}, function(error){
+			console.log(error);
+		});
 
 	}]);
 }());
