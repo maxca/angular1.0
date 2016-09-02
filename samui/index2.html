@@ -1,0 +1,28 @@
+    <div class="container">
+    <h2>AngularJS</h2>
+        <form name = 'addData' ng-submit = 'submitData(list)'>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input ng-model ='list.item.name' require type="text" class="form-control" id="exampleInputEmail1" name = 'name' placeholder="Name">
+              <h1>{{myForm.name.$valid}}</h1>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Email</label>
+              <input ng-model ='list.item.email' type="email" name="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+              <h1>{{myForm.email.$valid}}</h1>
+            </div>
+              <div class="form-group">
+              <label for="exampleInputPassword1">tel</label>
+              <input ng-model ='list.item.tel' type="text" class="form-control" name = "tel" id="" placeholder="tel">
+            </div>
+           <div class="form-group">
+              <label for="exampleInputPassword1">thai id</label>
+              <input ng-model ='list.item.thai_id'  type="text" class="form-control" name= "thai_id" id="" placeholder="thai id">
+            </div>
+           <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input ng-model ='list.item.password' type="password" class="form-control" name = "password" id="" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
